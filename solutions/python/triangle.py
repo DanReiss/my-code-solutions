@@ -11,12 +11,15 @@ def is_triangle(sides):
         if (a + b >= c) and (b + c >= a) and (a + c >= b):
             return True
     return False
+
 def equilateral(sides):
     a, b, c = sides
     return is_triangle(sides) and a == b == c
+
 def isosceles(sides):
     a, b, c = sides
     return is_triangle(sides) and len({a, b, c}) <= 2
+
 def scalene(sides):
     a, b, c = sides
     return is_triangle(sides) and len({a, b, c}) == 3
